@@ -12,9 +12,9 @@ import org.springframework.context.annotation.Configuration;
 public class LeituraArquivoMultiplosFormatosJobConfig {
 
     @Bean
-    public Job leituraArquivoMultiplosFormatosJob(Step leituraArquivoMultiplosFormatosStep, JobRepository jobRepository) {
+    public Job leituraArquivoMultiplosFormatosJob(Step leituraArquivoMultiplosFormatosClienteTransacaoStep, JobRepository jobRepository) {
         return new JobBuilder("leituraArquivoMultiplosFormatosJob", jobRepository)
-                .start(leituraArquivoMultiplosFormatosStep)
+                .start(leituraArquivoMultiplosFormatosClienteTransacaoStep)
                 .incrementer(new RunIdIncrementer())
                 .build();
     }
