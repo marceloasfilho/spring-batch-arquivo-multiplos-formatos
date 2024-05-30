@@ -1,0 +1,11 @@
+0,João,Silva,32,joao@gmail.com
+0,Maria,Silva,25,maria@gmail.com
+1,t1c1,Cadeado,50.80
+1,t1c2,Corrente,30.50
+0,Marcelo,Filho,28,marcelo@gmail.com
+1,t2c1,Anel,100.00
+1,t2c2,Brinco,80.00
+0,Ana,Carvalho,35,ana@gmail.com
+1,t3c1,Colar,200.00
+1,t3c2,Pulseira,150.00
+0,Joana,Carvalho,40,joana@gmail.com
