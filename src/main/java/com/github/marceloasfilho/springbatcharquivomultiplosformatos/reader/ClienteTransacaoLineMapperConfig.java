@@ -1,7 +1,7 @@
 package com.github.marceloasfilho.springbatcharquivomultiplosformatos.reader;
 
-import com.github.marceloasfilho.springbatcharquivomultiplosformatos.entity.Cliente;
-import com.github.marceloasfilho.springbatcharquivomultiplosformatos.entity.Transacao;
+import com.github.marceloasfilho.springbatcharquivomultiplosformatos.domain.Cliente;
+import com.github.marceloasfilho.springbatcharquivomultiplosformatos.domain.Transacao;
 import org.springframework.batch.item.file.mapping.BeanWrapperFieldSetMapper;
 import org.springframework.batch.item.file.mapping.FieldSetMapper;
 import org.springframework.batch.item.file.mapping.PatternMatchingCompositeLineMapper;

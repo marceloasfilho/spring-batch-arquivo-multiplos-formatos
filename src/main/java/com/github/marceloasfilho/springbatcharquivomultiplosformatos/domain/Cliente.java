@@ -1,4 +1,4 @@
-package com.github.marceloasfilho.springbatcharquivomultiplosformatos.entity;
+package com.github.marceloasfilho.springbatcharquivomultiplosformatos.domain;
 
 import lombok.Data;
 
