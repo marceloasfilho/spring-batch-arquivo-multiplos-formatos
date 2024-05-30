@@ -5,6 +5,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Data
 @Builder
 @NoArgsConstructor
@@ -14,4 +16,5 @@ public class Cliente {
     private String sobrenome;
     private String idade;
     private String email;
+    private List<Transacao> transacoes;
 }

@@ -8,13 +8,16 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.batch.item.ExecutionContext;
 import org.springframework.batch.item.ItemStreamException;
 import org.springframework.batch.item.ItemStreamReader;
+import org.springframework.batch.item.file.FlatFileItemReader;
+import org.springframework.batch.item.file.ResourceAwareItemReaderItemStream;
+import org.springframework.core.io.Resource;
 
 import java.util.ArrayList;
 
 @RequiredArgsConstructor
-public class LeituraArquivoClienteTransacaoReaderConfig implements ItemStreamReader<ClienteTransacao> {
+public class LeituraArquivoClienteTransacaoReaderConfig implements ItemStreamReader<ClienteTransacao>, ResourceAwareItemReaderItemStream<ClienteTransacao> {
 
-    private final ItemStreamReader<Object> delegate;
+    private final FlatFileItemReader<Object> delegate;
     private Object clienteOuTransacaoAtual;
 
     @Override
@@ -63,5 +66,10 @@ public class LeituraArquivoClienteTransacaoReaderConfig implements ItemStreamRea
     @Override
     public void close() throws ItemStreamException {
         this.delegate.close();
+    }
+
+    @Override
+    public void setResource(@NonNull Resource resource) {
+        this.delegate.setResource(resource);
     }
 }
